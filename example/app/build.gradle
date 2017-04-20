@@ -1,15 +1,14 @@
 apply plugin: 'com.android.application'
-// This does not break the build when Android Studio is missing the JRebel for Android plugin.
-apply plugin: 'com.zeroturnaround.jrebel.android'
+apply plugin: 'realm-android'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion '23.0.2'
+    compileSdkVersion 25
+    buildToolsVersion '25.0.0'
 
     defaultConfig {
         applicationId "co.moonmonkeylabs.realmrecyclerview.example"
         minSdkVersion 15
-        targetSdkVersion 23
+        targetSdkVersion 25
         versionCode 1
         versionName "1.0"
     }
@@ -32,14 +31,14 @@ android {
 
 dependencies {
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:support-v4:23.1.1'
-    compile 'com.android.support:appcompat-v7:23.1.1'
-    compile 'com.android.support:recyclerview-v7:23.1.1'
+    compile 'com.android.support:support-v4:25.0.1'
+    compile 'com.android.support:appcompat-v7:25.0.1'
+    compile 'com.android.support:recyclerview-v7:25.0.1'
     compile 'com.github.bumptech.glide:glide:3.6.1'
     // The library reference
-//        compile project(':library')
-    compile 'com.github.thorbenprimke:realm-recyclerview:0.9.12'
+//    compile project(':library')
+    compile 'com.github.thorbenprimke:realm-recyclerview:0.9.25'
     // The date project reference
-    //        compile project(':data')
-    compile 'com.github.thorbenprimke:realm-nytimes-data:0.9.3'
+//    compile project(':data')
+    compile 'com.github.thorbenprimke:realm-nytimes-data:0.9.7'
 }
